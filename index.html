@@ -5,6 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Manju Portfolio</title>
+     <style>
+      @media (max-width: 768px) {
+        #navbar {
+          flex-wrap: wrap;
+          justify-content: space-around;
+          padding: 10px;
+        }
+
+        #intro h3 {
+          font-size: 16px;
+        }
+
+        .about_container,
+        .skills_container,
+        .education_container,
+        .projects_card,
+        .certifications_container,
+        .contact_container {
+          flex-direction: column !important;
+          display: flex !important;
+          align-items: center !important;
+        }
+
+        .project_card,
+        .skill_card,
+        .certifications_card,
+        .box,
+        .contact_container div {
+          max-width: 90vw !important;
+          width: 100%;
+        }
+
+        .certifications_container {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+        }
+
+        .projects_card {
+          grid-template-columns: 1fr;
+        }
+
+        .skills_container {
+          grid-template-columns: 1fr;
+        }
+
+        .certifications_sections,
+        .contact_section {
+          height: auto;
+        }
+      }
+    </style>
 </head>
 <body>
     <!--Navbar-->
@@ -36,7 +87,7 @@
                  <h1>Who am I?</h1>
                  <p>I have completed my Bachelor's degree in Computer Science and Engineering from G.Narayanamma Institute of Technology and Science (GNITS), Hyderabad. During my academic journey, I developed a strong interest in building software solutions that are both effective and user-friendly.
                     <br>I have worked on projects using front-end technologies along with .NET and SQL for backend development. I am passionate about developing applications that solve real-world problems and enjoy learning new technologies to enhance my skills and contribute to impactful solutions.</p>
-                 <button>Download Resume</button>
+                 <!--button>Download Resume</button-->
             </div>
         </div>
     </div>
@@ -138,19 +189,19 @@
            <p>Developed a web-based Customer Feedback and Review System using ASP.NET and SQL Server to collect, store, and analyze user feedback across various service parameters. The system allowed customers to submit detailed reviews, ratings, and improvement suggestions through a structured survey form. Implemented admin-level access to monitor submissions and export reports, enhancing decision-making. Optimized database interactions for efficient data retrieval and ensured a user-friendly interface for seamless feedback submission.</p>
         </div>
         <div class="project_card">
-            <img src="project1.jpg" alt="project1">
-            <h3 class="project_title">Customer Feedback and Review System</h3>
-            <p>...</p>
+            <img src="project2.avif" alt="project2">
+            <h3 class="project_title">Gen AI-powered Chatbot</h3>
+            <p>Developed a Generative AI-based chatbot using Python and Streamlit for an internal demo. The chatbot allows users to ask natural language questions and retrieves relevant information from uploaded Excel or PDF files. It is designed to handle trade and portfolio queries, providing data summaries, stock change insights, and contextual responses. </p>
         </div>
         <div class="project_card">
-           <img src="project1.jpg" alt="project1">
-           <h3 class="project_title">Customer Feedback and Review System</h3>
-           <p>...</p>
+           <img src="project3.webp" alt="project1">
+           <h3 class="project_title">Car Booking Management System</h3>
+           <p>Designed and developed a responsive Car Booking Management System using HTML, CSS, and Bootstrap. The interface allows users to view available cars, select booking dates, and submit booking requests through a clean and user-friendly layout. Emphasized responsive design for seamless access across devices.</p>
         </div>
         <div class="project_card">
-           <img src="project1.jpg" alt="project1">
-           <h3 class="project_title">Customer Feedback and Review System</h3>
-           <p>...</p>
+           <img src="project4.jpg" alt="project1">
+           <h3 class="project_title">To-Do List App</h3>
+           <p>Developed a responsive To-Do List application using HTML, CSS, JavaScript, and Bootstrap. Users can add, edit, or delete tasks, and mark them as completed or pending with a single click. Integrated browser Local Storage to save tasks persistently, even after the browser is closed or refreshed. The app offers a simple and interactive UI for daily task tracking.</p>
         </div>
     </div>
     <!--Certifications-->
@@ -174,20 +225,20 @@
                <p>Completed a 5-week training in Machine Learning, powered by Brain-O-Vision.</p>
             </div>
             <div class="certifications_card">
-               <h3>Agile Methodologies</h3>
-               <p>A course powered by IBM Developer Skills Network.</p>
+               <h3>SQL for Data Analysis</h3>
+               <p>Completed a course focused on writing optimized SQL queries, performing joins, aggregations, and data manipulation for reporting and analytics.</p>
             </div>
             <div class="certifications_card">
-               <h3>Agile Methodologies</h3>
-               <p>A course powered by IBM Developer Skills Network.</p>
+               <h3>JavaScript Essentials</h3>
+               <p>Completed a course covering core JavaScript concepts including DOM manipulation, event handling, and asynchronous programming.</p>
             </div>
             <div class="certifications_card">
-               <h3>Agile Methodologies</h3>
-               <p>A course powered by IBM Developer Skills Network.</p>
+               <h3>AI Bootcamp</h3>
+               <p>Completed a practical AI Bootcamp on Udemy covering fundamentals of Artificial Intelligence</p>
             </div>
             <div class="certifications_card">
-               <h3>Agile Methodologies</h3>
-               <p>A course powered by IBM Developer Skills Network.</p>
+               <h3>Data Structures and Algorithms in C++</h3>
+               <p>A course powered by Coding Ninjas</p>
             </div>
         </div>
     </div>
