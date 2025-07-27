@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Manju Portfolio</title>
+    <script src="contact.js"></script>
      <style>
       @media (max-width: 768px) {
         #navbar {
@@ -57,6 +58,23 @@
       }
     </style>
 </head>
+<script>
+  document.getElementById("contact_form").addEventListener("submit", function (event) {
+    event.preventDefault(); // prevent actual form submission
+    const name = this.name.value;
+    const email = this.email.value;
+    const subject = this.subject.value;
+    const message = this.message.value;
+
+    if (name && email && subject && message) {
+      alert("Thank you for reaching out, " + name + "!");
+      this.reset(); // clears the form
+    } else {
+      alert("Please fill out all fields.");
+    }
+  });
+</script>
+
 <body>
     <!--Navbar-->
     <div id="navbar">
@@ -74,7 +92,7 @@
     <div id="intro">
         <h1>Hi I'm <span class="highlight">Manju Vedantam</span></h1>
         <h3>A passionate Computer Science Graduate specializing in Web Development, .NET, SQL, and AI-based solutions.</h3>
-        <button>Contact Me</button>
+        <a href="#contact"><button>Contact Me</button></a>
     </div>
     <!--About-->
     <div id="about" class="about_section">
