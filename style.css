@@ -1,0 +1,372 @@
+*{
+    padding: 0;
+    margin:0;
+    font-family: "Poppins", sans-serif;
+}
+body {
+    padding-top: 80px; /* Adjust height based on your navbar height */
+}
+.about_section,
+.myskills_section,
+.education_section,
+.projects_section {
+  scroll-margin-top: 100px;
+}
+
+#navbar {
+    position: fixed;           /* makes it sticky */
+    top: 0;                    /* attach to top */
+    width: 100%;               /* take full width */
+    background-color: white;   /* keep background visible */
+    display: flex;
+    justify-content: center;
+    padding: 20px 25px;
+    gap: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;             /* ensures it stays above other content */
+}
+
+#name{
+    color: #1E90FF;
+    text-decoration: none;
+    font-size: 18px;
+}
+a{
+    text-decoration: none;
+    color:black;
+    font-size: 18px;
+    font-weight: bold;
+}
+a:hover{    
+    text-decoration: underline;          
+    text-decoration-color: #1E90FF;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 10px; /* this adds space between text and underline */
+}
+.highlight{
+    color: #1E90FF;
+}
+#intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;           /* Make it take full browser height */
+    text-align: center;      /* Center-align the text */
+    padding: 5rem 2rem;         /* Add some horizontal padding for small screens */
+    box-sizing: border-box;  /* Include padding in width calculation */
+    gap:20px;
+}
+#intro h1{
+    font-weight: bold;
+    font-family: serif;
+}
+ #intro h3{
+    font-weight: normal;
+    max-width: 700px;       /* limits how wide the line goes */
+    margin: 0 auto;         /* centers it horizontally */
+    line-height: 1.5;       /* improves readability */
+    font-family: system-ui;
+    font-size: 20px;
+ }
+button{
+    background-color: #1E90FF;
+    color: white;
+    padding: 15px 32px;
+    border-radius: 15px;
+    font-weight: bold;
+    border: none;
+}
+button:hover{
+    background-color: #004687;
+    cursor: pointer;
+    
+}
+.about_section h1,.myskills_section h1,.education_section h1,.projects_section h1, .certifications_sections h1{
+    text-align: center;
+    text-decoration: underline;
+     text-decoration-color: #1E90FF;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 10px;
+    margin-bottom: 25px;  
+}
+/*About*/
+.about_section{
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 2rem 0;
+}
+
+.about_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 0 2rem;
+    max-width: 100%;
+    flex-wrap: wrap; /* makes it responsive on smaller screens */
+    box-sizing: border-box;  
+}
+img {
+    width: 250px;       /* optional: fixed size */
+    height: auto;
+    object-fit: cover;
+}
+
+.about {
+    max-width: 600px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.about h1{
+    text-decoration: none;
+    font-size: 24px;
+    margin-bottom: 1rem;
+    text-align: left;
+    font-family: serif;
+}
+.about p {
+    margin-bottom: 1.5rem;
+    font-family: system-ui;
+    font-size: 18px;
+}
+/*Education*/
+.education_section{
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 2rem 0;
+}
+.education_container{
+    display: flex;
+    flex-direction: column;     /* stack the boxes */
+    align-items: center;        /* center them horizontally */
+    gap: 20px;                  /* spacing between boxes */
+}
+.box {
+    max-width: 700px;
+    width: 100%;
+    line-height: 1.6;
+    text-align: justify;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    box-sizing: border-box;
+}
+.education_container h2{
+    font-weight: normal;
+    color: #1E90FF;
+    font-size: 20px;
+}
+.education_container h3{
+    font-weight: normal;
+     font-size: 15px;
+}
+/*My skills*/
+.myskills_section {  
+    text-align: center;
+}
+
+.skills_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px;
+    padding: 0 2rem;
+    max-width: 1000px; /* Limit total width */
+    margin: 0 auto; /* Center the whole grid */
+}
+.skill_card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+.skill_card:hover {
+    transform: translateY(-10px); /* move up on hover */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2); /* stronger shadow */
+}
+
+.skill_title {
+    color: #1E90FF;
+    text-align: left;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    font-family: serif;
+}
+.skill_card ul {
+    text-align: left;
+    padding-left: 20px;
+    line-height: 1.6;
+    font-family: system-ui;
+}
+@media (max-width: 900px) {
+  .skills_container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .skills_container {
+    grid-template-columns: 1fr;
+  }
+}
+/*My projects*/
+.projects_section {
+    padding: 2rem;
+    text-align: center;
+
+}
+.projects_card h3{
+    font-weight: normal;
+    color: #1E90FF;
+    font-family: serif;
+    text-align: left;
+    padding: 10px;
+}
+.projects_card p{
+     font-family: system-ui;
+     text-align: left; 
+     padding: 10px;
+}
+.projects_card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    padding: 1rem;
+}
+
+.project_card {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    width: 100%;
+    max-width: 300px; /* Ensures cards don’t stretch too wide */
+}
+
+.project_card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+/*Certifications*/
+.certifications_sections {
+  height: 100vh; /* fills full browser height */
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertically center */
+  box-sizing: border-box;
+}
+
+.certifications_container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);  /* 4 per row */
+  gap: 12px;                              /* smaller gap between boxes */
+  padding: 1rem;
+}
+
+.certifications_card {
+  margin-bottom: 5px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 180px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* <- changed from space-between */
+}
+
+
+
+.certifications_card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.certifications_card h3 {
+  color: #1E90FF;
+  margin-bottom: 4px;
+  text-align: left;
+}
+
+.certifications_card p {
+  font-family: system-ui;
+  text-align: left;
+  margin-top: 0; /* Removes extra space above paragraph */
+}
+/*Contact*/
+.contact_section {
+  padding: 2rem;
+  text-align: center;
+  height: 100vh; /* fills full browser height */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertically center */
+  box-sizing: border-box;
+}
+
+.contact_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap; /* optional: helps on smaller screens */
+  margin-top: 20px;
+}
+
+.contact_container div {
+  flex: 1 1 300px;
+  max-width: 500px;
+  text-align: left;
+}
+
+#contact_form input,
+#contact_form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+#contact_form button {
+  padding: 10px 20px;
+  background-color: #1E90FF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#contact_form button:hover {
+  background-color: #007acc;
+}
+.contact_container img{
+     height: 15px;
+     width: 15px;
+     padding-right: 10px;
+}
+.contact_container h2{
+   padding-bottom: 10px;
+   font-family: serif;
+}
+.contact_container p{
+   font-family: system-ui;
+   padding-bottom: 5px;
+}
